@@ -1,1 +1,16 @@
-
+cases:
+  - id: "last_mile_basic"
+    name: "Última milla - básico"
+    context: "Reparto urbano con incertidumbre por clima y promociones."
+    S: "Estado: paquetes pendientes, flota disponible, clima, hora."
+    A: "Acciones: asignar paquetes a camión, seleccionar ruta, priorizar entregas."
+    T: "Transiciones: cambios por tráfico, entregas completadas, incidencias."
+    G: "Objetivo: maximizar entregas a tiempo y valor."
+    C: "Restricciones: capacidad camión, ventana horaria, normativa."
+    R: "Riesgo: retrasos, penalizaciones; recompensa: entregas on-time."
+    hard_constraints:
+      - "Capacidad del camión"
+      - "Ventana horaria"
+    soft_constraints:
+      - "Preferencia por clientes premium"
+      - "Minimizar CO2"
